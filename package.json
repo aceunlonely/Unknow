@@ -1,0 +1,22 @@
+{
+  "name": "unknow",
+  "version": "1.5.0",
+  "description": "main part of unknow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aceunlonely/Unknow.git"
+  },
+  "keywords": [
+    "unknow"
+  ],
+  "author": "xyliu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aceunlonely/Unknow/issues"
+  },
+  "homepage": "https://github.com/aceunlonely/Unknow#readme"
+}
