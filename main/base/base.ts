@@ -147,7 +147,17 @@ class BattleAttr{
     hr_bonus_p:number;
     hr:number;
 
-    //todo 
+    //cr 要害命中率
+    cr_base:number;
+    cr_bonus_m:number;
+    cr_bonus_p:number;
+    cr:number;
+
+    // evade
+    eva_base:number;
+    eva_bonus_m:number;
+    eva_bonus_p:number;
+    eva:number;
 }
 
 
@@ -164,7 +174,12 @@ class HumenBeing extends Body
     //基础属性
     basicAttr: BasicAttr;
     hiddenAttr: HiddenAttr;
+    battleAttr : BattleAttr;
 }
 
+
+enum EnumQuntity { god,legend,ultima,famous,super,one,two,three,four,five,unknow,other}
+
+enum EquipType { weapon,shield,body,leg,head,special}
 
 
