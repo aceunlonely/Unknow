@@ -25,5 +25,15 @@ export function refreshHuman(man : base.HumenBeing)
 
     // wu qi chengzhang
     man.hiddenAttr.grow_base = man.hiddenAttr.grow_base_bonus_level* man.hunterLevel + man.hiddenAttr.grow_base_init + man.hiddenAttr.grow_base_bonus;
-    man.hiddenAttr.grow_sword = man.hiddenAttr.grow_base * Math.pow(man.hiddenAttr.suit_sword,man.hiddenAttr.battle_talent/100);
+    var f_grow = function(suit:number){return man.hiddenAttr.grow_base * Math.pow(suit,man.hiddenAttr.battle_talent/100)};
+    man.hiddenAttr.grow_sword = f_grow(man.hiddenAttr.suit_sword);
+    man.hiddenAttr.grow_shield = f_grow(man.hiddenAttr.suit_shield);
+    man.hiddenAttr.grow_claymore=f_grow(man.hiddenAttr.suit_claymore);
+    man.hiddenAttr.grow_blade = f_grow(man.hiddenAttr.suit_blade);
+    man.hiddenAttr.grow_gun = f_grow(man.hiddenAttr.suit_gun);
+    man.hiddenAttr.grow_spear = f_grow(man.hiddenAttr.suit_spear);
+    man.hiddenAttr.grow_bow = f_grow(man.hiddenAttr.suit_bow);
+    man.hiddenAttr.grow_axe = f_grow(man.hiddenAttr.suit_axe);
+    man.hiddenAttr.grow_dagger = f_grow(man.hiddenAttr.suit_dagger);
+    man.hiddenAttr.grow_staff = f_grow(man.hiddenAttr.suit_staff);
 }
