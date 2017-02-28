@@ -161,7 +161,71 @@ class BattleAttr{
 }
 
 
-class HumenBeing extends Body
+
+enum EnumQuntity { god,legend,ultima,famous,super,one,two,three,four,five,unknow,other}
+
+enum EquipType { weapon,shield,body,leg,head,special}
+
+enum EquipSubType{ sword}
+
+//装备特性
+enum EquipSpecial {}
+
+export class Equip {
+    name : string;
+    subType : EquipSubType; 
+    quntity: EnumQuntity;
+    cof: number;
+    equipType: EquipType;
+
+    at: number;
+    at_shock:number;
+    dura:number; //nai jiu
+    special: EquipSpecial;
+    parry: number; //ge dang
+    def : number;
+    //hit rate plus
+    hr_bonus_p:number;
+    //c rate plus
+    cr_bonus_p:number;
+    //eva rate plus;
+    eva_bonus_p:number;
+    //eva c rate plus;
+    ceva_bonus_p:number;
+    // shanghai xiu zheng hcor
+    hCor:number;
+    // c xiu zheng chCor;
+    chCor:number;
+    
+    //
+    str_bonus:number;
+    vit_bonus:number;
+    focus_bonus:number;
+    agi_bonus:number;
+    mo_bonus:number;
+    strD_bonus:number;
+    iq_bonus:number;
+    eq_bonus:number;
+    hp_bonus:number;
+    mp_bonus:number;
+    atk_bonus:number;
+    def_bonus:number;
+    hr_bonus:number;
+    cr_bonus:number;
+    eva_bonus:number;
+    ceva_bonus:number;
+}
+
+// equip cap enum EquipType { weapon,shield,body,leg,head,special}
+class EquipCap{
+    l_hand : Equip;
+    r_hand : Equip;
+    head : Equip;
+    body: Equip;
+    leg: Equip;
+}
+
+export class HumenBeing extends Body
 {
     name : string;
     hunterName : string;
@@ -175,11 +239,6 @@ class HumenBeing extends Body
     basicAttr: BasicAttr;
     hiddenAttr: HiddenAttr;
     battleAttr : BattleAttr;
+
+    equip:EquipCap;
 }
-
-
-enum EnumQuntity { god,legend,ultima,famous,super,one,two,three,four,five,unknow,other}
-
-enum EquipType { weapon,shield,body,leg,head,special}
-
-
