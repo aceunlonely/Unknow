@@ -1,5 +1,5 @@
 # Unknow
-maybe a funny game naming 'unknow'
+maybe a funny game named 'unknow'
 
 
 ## plan
